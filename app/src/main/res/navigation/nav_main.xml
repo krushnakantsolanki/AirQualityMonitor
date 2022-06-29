@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/aqicity_fragment">
+
+    <fragment
+        android:id="@+id/aqicity_fragment"
+        android:name="com.proximity.airquality.aqcitylist.ui.AQICityListFragment"
+        android:label="@string/aqicity_list"
+        tools:layout="@layout/fragment_city_list">
+
+        <argument
+            android:name="themeId"
+            app:argType="integer"
+            android:defaultValue="-1"/>
+
+        <argument
+            android:name="themeName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+
+        <action
+            android:id="@+id/action_to_aqicity_detail_fragment"
+            app:destination="@id/aqicity_detail_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/aqicity_detail_fragment"
+        android:name="com.proximity.airquality.aqdetail.ui.AQICityDetailFragment"
+        android:label="@string/aqicity_detail"
+        tools:layout="@layout/fragment_city_detail">
+
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

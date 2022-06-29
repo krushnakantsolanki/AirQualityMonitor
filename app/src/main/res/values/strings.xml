@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AirQuality</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="aqicity_list">AQI City</string>
+    <string name="aqicity_detail">AQI City Detail</string>
+
+
 </resources>
